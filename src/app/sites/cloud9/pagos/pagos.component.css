@@ -1,0 +1,45 @@
+body {
+    background-color: #e6f7ff;
+  }
+  
+  .jumbotron {
+    background-color: #50bde4!important;
+    color: #ffffff;
+  }
+  
+  .product-card {
+    background-color: #50bde4;
+    color: #ffffff;
+    width: 600px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .d-flex {
+    background-color: #c0ff72;
+    flex-wrap: wrap;
+  }
+  
+  .arrow {
+    font-size: 2em;
+    color: #ffffff;
+  }
+  
+  .product-img, .qr-img {
+    background-color: #ffffff;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 190px; /* tamaño máximo ajustado */
+    height: auto;
+  }
+  
+  /* Esto garantiza que los elementos dentro del flexbox no se envuelvan */
+  .d-flex > div {
+    flex: 0 0 auto;
+  }
+  
+  mat-card-title, mat-card-subtitle, mat-card-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  

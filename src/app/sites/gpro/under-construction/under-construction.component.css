@@ -1,0 +1,99 @@
+/* styles.css */
+
+.container-fluid {
+    padding: 0;
+  }
+  
+  .logo {
+    max-height: 60px; /* Altura máxima del logo */
+    margin-right: 10px;
+  }
+  
+  .mat-toolbar {
+    position: relative; /* Ajusta la posición relativa para los iconos */
+    background-color: #1c75ac; /* Color Primario */
+    height: 60px; /* Altura del toolbar */
+  }
+  
+  .mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alineación vertical de todos los elementos */
+  }
+  
+  /* Iconos de lenguaje y contacto en la esquina superior derecha */
+  .toolbar-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center; /* Alineación vertical de los iconos */
+  }
+  
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1c75ac; /* Color Primario */
+    height: 60px; /* Altura del encabezado */
+  }
+  
+  
+  .navbar {
+    padding-left: 0;
+  }
+  
+  .navbar-toggler-icon {
+    color: #fff;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Textos */
+  body {
+    color: #5c5d5b; /* Texto Principal */
+  }
+  
+  .navbar .navbar-brand,
+  .navbar .navbar-nav .nav-link {
+    color: #ffffff; /* Texto Secundario en el encabezado */
+  }
+  
+  /* Texto Oscuro */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: #000000; /* Texto Oscuro */
+  }
+  
+  /* Tarjetas de características */
+  .feature-card {
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feature-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  

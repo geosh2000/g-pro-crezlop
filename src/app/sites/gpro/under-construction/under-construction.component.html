@@ -1,0 +1,81 @@
+<!-- app.component.html -->
+
+<div class="container-fluid">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row class="align-vertical">
+          <!-- Menú desplegable en pantallas pequeñas -->
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <a href="#" style="color: #1c75ac;">G-Pro</a>
+            </button>
+            <button mat-menu-item>
+              <a href="#" style="color: #1c75ac;">Cloud</a>
+            </button>
+            <button mat-menu-item>
+              <a href="#" style="color: #1c75ac;">Clientes</a>
+            </button>
+            <button mat-menu-item>
+              <a href="#" style="color: #1c75ac;">Ver Demo</a>
+            </button>
+          </mat-menu>
+    
+          <!-- Logo a la izquierda -->
+          <a class="navbar-brand me-auto" href="#">
+            <img src="assets/images/logos/gg-blanco-transp.png" alt="Logo de G-Pro Connect" class="logo">
+          </a>
+    
+        </mat-toolbar-row>
+        <div class="toolbar-icons">
+            <button mat-icon-button>
+              <mat-icon>language</mat-icon>
+            </button>
+      
+            <button mat-icon-button>
+              <mat-icon>mail_outline</mat-icon>
+            </button>
+          </div>
+      </mat-toolbar>
+  
+    <section class="bg-primary text-light p-5 rounded">
+      <h2 class="mat-display-2">¡Optimiza, Simplifica, Automatiza!</h2>
+      <p class="mat-body-1">G-Pro Connect® es el sistema de gestión empresarial que tu empresa necesita. Impulsa la eficiencia y el control.</p>
+    </section>
+  
+    <section>
+      <h2 class="mat-display-1">Características Destacadas</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="mat-card feature-card">
+            <img src="assets/images/generic/iot-prod.png" alt="Característica 1" class="mat-card-image">
+            <h3 class="mat-headline">Aumenta la Productividad</h3>
+            <p class="mat-body-1">Optimiza tus procesos para obtener mayor eficiencia y resultados superiores.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mat-card feature-card">
+            <img src="assets/images/generic/cost-reduction.png" alt="Característica 2" class="mat-card-image">
+            <h3 class="mat-headline">Ahorra Costos</h3>
+            <p class="mat-body-1">Reduce gastos y mejora la rentabilidad de tu negocio.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mat-card feature-card">
+            <img src="assets/images/generic/realtime-graph.png" alt="Característica 3" class="mat-card-image">
+            <h3 class="mat-headline">Control Total</h3>
+            <p class="mat-body-1">Mantén el control de tus operaciones en tiempo real y toma decisiones informadas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Resto del contenido de la página -->
+  
+    <footer class="bg-dark text-light p-3">
+      <p>Muy pronto, G-Pro Connect® está trabajando para ti. Mantente atento para más información.</p>
+      <p>Contacto: <a href="mailto:contact@gmail.com" style="color: #1c75ac;">contact@gmail.com</a></p>
+    </footer>
+  </div>
+  
