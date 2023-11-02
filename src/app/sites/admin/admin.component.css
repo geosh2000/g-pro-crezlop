@@ -1,0 +1,64 @@
+/* app.component.css */
+
+/* Estilo para el contenedor principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px); /* Resta la altura del toolbar (64px) */
+}
+
+/* Estilo para el toolbar */
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Estilo para el logo */
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Espacio entre elementos del toolbar */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Estilo para el sidenav */
+.sidenav {
+  min-height: calc(100vh - 128px); /* Resta la altura del toolbar (64px) y del footer (64px)*/
+  margin-top: 64px; /* Mueve el sidenav debajo del toolbar */
+}
+
+/* Estilo para el contenido principal */
+.main-content {
+  flex-grow: 1; /* Hace que el contenido crezca para ocupar el espacio restante */
+  padding: 16px;
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+/* Estilo para los iconos de redes sociales */
+.redes-sociales {
+  font-size: 24px;
+  margin-top: 8px;
+}
+
+/* Estilo para los botones del menú */
+mat-list-item {
+  cursor: pointer;
+}
+
+/* Estilo para los botones del toolbar */
+button.mat-icon-button {
+  color: white;
+}

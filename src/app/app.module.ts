@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { GproModule } from './sites/gpro/gpro.module';
+import { LoginModule } from './sites/Login/login.module';
+import { AdminModule } from './sites/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { GproModule } from './sites/gpro/gpro.module';
     AppRoutingModule,
 
     GproModule,
+    LoginModule,
+    AdminModule,
   ],
   providers: [
 

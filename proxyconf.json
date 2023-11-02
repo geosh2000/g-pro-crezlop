@@ -1,9 +1,11 @@
 {
-    "/api.geoshglobal.com/crezlop": {
-        "target": "http://localost:8080/crezlopApi",
-        "secure": false,
-        "changeOrigin": true
-    },
+
+  "/crezlopApi": {
+    "target": "http://localhost:8888/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
     "/ng2/json": {
         "target": "https://geoshglobal.com",
         "secure": false,

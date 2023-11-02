@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotAllowedComponent } from './pages/not-allowed/not-allowed.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { GproRoutingModule } from './sites/gpro/gpro.routing';
+import { LoginRoutingModule } from './sites/Login/login.routing';
+import { AdminRoutingModule } from './sites/admin/admin.routing';
 
 
 const routes: Routes = [
@@ -17,7 +19,9 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, {useHash: true, scrollPositionRestoration: 'enabled'}),
 
-    GproRoutingModule
+    GproRoutingModule,
+    LoginRoutingModule,
+    AdminRoutingModule,
 
   ],
   exports: [RouterModule]

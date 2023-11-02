@@ -1,0 +1,45 @@
+<!-- app.component.html -->
+
+<div class="app-container">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="ruta-al-logo.png" alt="Logo" class="logo">
+    <span class="spacer"></span>
+    <button mat-icon-button><mat-icon>settings</mat-icon></button>
+    <button mat-icon-button><mat-icon>account_circle</mat-icon></button>
+    <button mat-icon-button><mat-icon>language</mat-icon></button>
+  </mat-toolbar>
+
+  <mat-drawer-container class="sidenav">
+    <!-- Contenido del menú aquí -->
+    <mat-drawer #drawer mode="side">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon>home</mat-icon>
+          <span>Inicio</span>
+        </mat-list-item>
+        <!-- Más elementos de menú aquí -->
+      </mat-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+
+  <footer>
+    <!-- Contenido del footer -->
+    <p>&copy; 2023 Nombre del Sitio. Todos los derechos reservados.</p>
+    <div class="redes-sociales">
+      <!-- Iconos de redes sociales -->
+    </div>
+  </footer>
+</div>

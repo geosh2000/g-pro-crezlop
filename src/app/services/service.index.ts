@@ -1,4 +1,5 @@
-// export { ApiService } from './api.service';
+export { CommonService } from './common.service';
+export { ApiService } from './api.service';
 // export { AsesoresService } from './asesores.service';
 // export { CredentialsService } from './credentials.service';
 // export { GlobalServicesService } from './global-services.service';

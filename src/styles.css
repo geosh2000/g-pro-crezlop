@@ -4,3 +4,33 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.blue-snackbar {
+  background: #2196F3;
+}
+
+::ng-deep .error-snackbar {
+  background: #ee5050;
+  color: white
+}
+
+/* Snackbar theming */
+.mat-mdc-snack-bar-container {
+  &.error-snackbar {
+    --mdc-snackbar-container-color: #ee5050;
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+    --mdc-snackbar-action-color: #f5f501;
+    --mat-snack-bar-button-color: #f5f501;
+  }
+}
+
+.mat-mdc-snack-bar-container {
+  &.success-snackbar {
+    --mdc-snackbar-container-color: #47d76b;
+    --mat-mdc-snack-bar-button-color: #000000;
+    --mdc-snackbar-supporting-text-color: #000000;
+    --mdc-snackbar-action-color: #190aa8;
+    --mat-snack-bar-button-color: #190aa8;
+  }
+}
