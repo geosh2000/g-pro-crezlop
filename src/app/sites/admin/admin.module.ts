@@ -12,7 +12,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { AdminComponent } from './admin.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
 import { HomeComponent } from './home/home.component';
+import { LoginModule } from '../Login/login.module';
 
 
 @NgModule({
@@ -39,6 +41,9 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatDialogModule,
+
+    LoginModule,
 
   ]
 })

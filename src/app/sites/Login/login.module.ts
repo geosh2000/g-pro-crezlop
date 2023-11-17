@@ -12,14 +12,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
+import { LoginCardComponent } from './Components/login-card.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    LoginCardComponent,
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
+    LoginCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatToolbarModule,
     MatIconModule,
     MatSnackBarModule,
-
+    MatInputModule,
+    MatDialogModule,
   ]
 })
 export class LoginModule { }

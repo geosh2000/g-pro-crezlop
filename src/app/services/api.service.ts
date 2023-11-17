@@ -7,6 +7,8 @@ import * as moment from 'moment';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { CommonService } from './service.index';
+import { LoginCardComponent } from '../sites/Login/Components/login-card.component';
+import { Location } from '@angular/common';
 
 declare global {
   interface Window {
@@ -35,7 +37,8 @@ export class ApiService {
                 private http:HttpClient,
                 private domSanitizer:DomSanitizer,
                 private router: Router,
-                private _common: CommonService
+                private _common: CommonService,
+                private location: Location,
               ) {
 
       // Obtiene ip publica
@@ -76,17 +79,47 @@ export class ApiService {
   }
 
   // Check if token is invalid
-  isTokenInvalid( res ): boolean {
-    if( res['msg'] && res['msg']  == 'Token Expired' ){
-      localStorage.removeItem('token');
+  isTokenInvalid( err ): boolean {
 
-      // Redirect to login
-      this.router.navigate(['/login']);
+    if( err  == 'Invalid Token' ){
+      localStorage.removeItem('token');
+      localStorage.removeItem('userData');
+
+      this.openLoginModal();
 
       return false;
     }
 
     return true;
+  }
+
+  openLoginModal(): void {
+    this._common.openModal( LoginCardComponent, '400px', (result) => {
+
+      console.log('Modal cerrado', result);
+
+      // Corre el token check
+      this.runGet( '', 'auth/check',
+        (res) => {},
+        (err) => {
+          this.openLoginModal()
+        });
+    });
+  }
+
+
+  checkAuth( url ): Promise<boolean>{
+
+    return new Promise(async resolve => {
+      this.runPost( { uri: url }, 'login/checkAuthMod',
+      (res) => {
+        resolve( res['data'] )
+      },
+      (err) => {
+        resolve( false )
+      });
+    });
+
   }
 
   put( params, apiRoute ){
@@ -170,6 +203,7 @@ export class ApiService {
       },
       (err:any) => {
         this._common.showError( err );
+        this.isTokenInvalid( this._common.returnError( err ) );
         if (errorCallback) {
           errorCallback(err);
         }
@@ -188,6 +222,7 @@ export class ApiService {
       },
       (err:any) => {
         this._common.showError( err );
+        this.isTokenInvalid( this._common.returnError( err ) );
         if (errorCallback) {
           errorCallback(err);
         }
@@ -206,6 +241,7 @@ export class ApiService {
       },
       (err:any) => {
         this._common.showError( err );
+        this.isTokenInvalid( this._common.returnError( err ) );
         if (errorCallback) {
           errorCallback(err);
         }
